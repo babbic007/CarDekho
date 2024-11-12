@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarDekho</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">   
+</head>
+<body>
+<div class="top-header sticky-top py-2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-6 col-md-4">
+                    <a href="#" class="navbar-brand ">
+                        <img src="image/logo.PNG" alt="Logo">
+                    </a>  
+                </div>
+                <div class="col-12 col-md-4 my-2 my-md-0">
+                    <form class="search-bar d-flex position-relative" style="max-width: 400px; margin: auto;">
+                        <input class="form-control me-2 px-5" type="search" placeholder="Search..." aria-label="Search">
+                            <div class="" style="position: absolute;left: 10px;top:10px;margin-right: 10px; ">
+                                <i class="fas fa-search"></i>
+                            </div>
+                    </form>
+                </div>
+                <div class="col-6 col-md-4 text-end d-none d-md-block">
+                    <span class="mx-2">English<i class="fa-solid fa-caret-down mx-2"></i></i>
+                    </span>
+                    <a href="#" class=" ms-3 text-dark"><i class="fas fa-user-circle mx-2"></i> Login/Register </a>
+                </div>
+            </div>
+        </div>
+</div>
+<nav class="navbar  navbar-expand-lg p-3 bottomArea">
+        <div class="container pt-3">
+            <div class="collapse navbar-collapse ">
+                <ul class="navbar-nav ">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            New Cars 
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                            <li><a class="dropdown-item" href="#">Product 1</a></li>
+                            <li><a class="dropdown-item" href="#">Product 2</a></li>
+                            <li><a class="dropdown-item" href="#">Product 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Buy &amp; Sell Used cars 
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                            <li><a class="dropdown-item" href="#">Product 1</a></li>
+                            <li><a class="dropdown-item" href="#">Product 2</a></li>
+                            <li><a class="dropdown-item" href="#">Product 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            News, Reviews & Videos 
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                            <li><a class="dropdown-item" href="#">Product 1</a></li>
+                            <li><a class="dropdown-item" href="#">Product 2</a></li>
+                            <li><a class="dropdown-item" href="#">Product 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Car Services 
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="#">Service 1</a></li>
+                            <li><a class="dropdown-item" href="#">Service 2</a></li>
+                            <li><a class="dropdown-item" href="#">Service 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div class="collapse navbar-collapse  ">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item dropdown flex-end">
+                            <a class="nav-link  " href="#">
+                                <i class="fas fa-location-pin"></i>
+                                <span class="mx-2">Select City</span>
+                                <i class="fa-solid fa-caret-down"></i>
+                            </a>
+                          
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</nav>
+<section class="banner d-flex align-items-center">
+        <div class="form-section text-black">
+            <h2>Find your right car</h2>
+            <form>    
+            <div class="mb-3 text-start">
+                <div class="radio-container">
+                   <div class="d-flex">
+                    <label class="form-label">New Car</label>
+                    <label class="form-label">Used Car</label>
+                   </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="budget" id="budget" value="buget" required>
+                        <label class="form-check-label" for="buget">My Budget</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="brand" id="brand" value="brand">
+                        <label class="form-check-label" for="brand">My Brand</label>
+                    </div>
+                </div>
+            </div>          
+            <div class="mb-3">
+                    <select class="form-select" required>
+                        <option selected disabled>Select Car</option>
+                        <option value="1">1-15 Lakh</option>
+                        <option value="2">15-25 Lakh</option>
+                        <option value="3">25-35 Lakh</option>
+                        <option value="4">35-45 Lakh</option>
+                    </select>
+            </div>
+            <div class="mb-3">
+                    <select class="form-select" required>
+                        <option selected disabled>All Vehicals Type</option>
+                        <option value="1">1-15 Lakh</option>
+                        <option value="2">15-25 Lakh</option>
+                        <option value="3">25-35 Lakh</option>
+                        <option value="4">35-45 Lakh</option>
+                    </select>
+            </div>
+            <button type="submit" class="btn searchbtn w-100">Search</button>
+            </form>
+        </div>
+</section>
+<section>
+      <div class="car-container">
+        <div class="Section-header">The most searched cars</div>  
+        <div class="tabs">
+          <div class="tab active">SUV</div>
+          <div class="tab">Hatchback</div>
+          <div class="tab">Sedan</div>
+          <div class="tab">MUV</div>
+          <div class="tab">Luxury</div>
+        </div>
+        <div class="card-box">
+          <div class="card">
+            <img src="image/car.png" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title">Skoda Kylq</div>
+              <div class="card-price">₹ 7.89 Lakh*</div>
+              <a href="#" class="card-button">View Offers</a>
+            </div>
+          </div>  
+          <div class="card">
+            <img src="image/C2.PNG" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title">Mahindra Scorpio</div>
+              <div class="card-price">₹ 13.62 - 17.42 Lakh*</div>
+              <a href="#" class="card-button">View Offers</a>
+            </div>
+          </div>
+            <div class="card">
+            <img src="image/C3.PNG" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title">Tata Nexon</div>
+              <div class="card-price">₹ 8 - 15.50 Lakh*</div>
+              <a href="#" class="card-button">View Offers</a>
+            </div>
+          </div>
+            <div class="card">
+            <img src="image/C4.PNG" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title">Mahindra Thar</div>
+              <div class="card-price">₹ 11.35 - 17.60 Lakh*</div>
+              <a href="#" class="card-button">View Offers</a>
+            </div>
+          </div>
+        </div>
+          <a href="#" class="view-all">View All SUV Cars <i class="fa-solid fa-caret-right"></i></a>
+        <div class="arrowBtn"><i class="fa-solid fa-caret-right"></i></div>
+      </div>
+    </section>
+<section>
+      <div class="car-container">
+        <div class="Section-header">Recommended Used Cars For You</div>
+        <div class="card-box">
+          <div class="card">
+            <img src="image/car.png" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title"> 2024 Audi Q5 Bold Edition </div>
+              <div class="card-price">₹ 59.75 Lakh*</div>
+              <div class="card-description">18,563 Km Petrol New Delhi</div>
+              <a href="#" class="card-button">View Offers</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="image/C2.PNG" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title">2024 Audi Q5 Bold Edition</div>
+              <div class="card-price">₹ 13.62 - 17.42 Lakh*</div>
+              <div class="card-description">18,563 Km Petrol New Delhi</div>
+              <a href="#" class="card-button">View Offers</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="image/C3.PNG" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title">2024 Audi Q5 Bold Edition</div>
+              <div class="card-price">₹ 13.62 - 17.42 Lakh*</div>
+              <div class="card-description">18,563 Km Petrol New Delhi</div>
+              <a href="#" class="card-button">View Offers</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="image/C4.PNG" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title">2024 Audi Q5 Bold Edition</div>
+              <div class="card-price">₹ 13.62 - 17.42 Lakh*</div>
+              <div class="card-description">18,563 Km Petrol New Delhi</div>
+              <a href="#" class="card-button">View Offers</a>
+            </div>
+          </div>
+        </div>
+  
+        <a href="#" class="view-all">View All SUV Cars <i class="fa-solid fa-caret-right"></i></a>
+        <div class="arrowBtn"><i class="fa-solid fa-caret-right"></i></div>
+      </div>
+</section>
+  <section>
+      <div class="car-container">
+        <div class="Section-header">Latest cars</div>
+          <div class="tabs">
+                <div class="tab active">SUV</div>
+                <div class="tab">Hatchback</div>
+                <div class="tab">Sedan</div>
+                <div class="tab">MUV</div>
+                <div class="tab">Luxury</div>
+        </div>
+        <div class="card-box">
+          <div class="card">
+            <img src="image/car.png" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title">Skoda Kylq</div>
+              <div class="card-price">₹ 7.89 Lakh*</div>
+              <a href="#" class="card-button">View Offers</a>
+            </div>
+          </div>  
+          <div class="card">
+            <img src="image/C2.PNG" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title">Mahindra Scorpio</div>
+              <div class="card-price">₹ 13.62 - 17.42 Lakh*</div>
+              <a href="#" class="card-button">View Offers</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="image/C3.PNG" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title">Tata Nexon</div>
+              <div class="card-price">₹ 8 - 15.50 Lakh*</div>
+              <a href="#" class="card-button">View Offers</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="image/C4.png" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title">Mahindra Thar</div>
+              <div class="card-price">₹ 11.35 - 17.60 Lakh*</div>
+              <a href="#" class="card-button">View Offers</a>
+            </div>
+          </div>
+        </div>
+        <!-- View All Link -->
+        <a href="#" class="view-all">View All SUV Cars <i class="fa-solid fa-caret-right"></i></a>
+        <div class="arrowBtn"><i class="fa-solid fa-caret-right"></i></div>
+  
+      </div>
+</section>  
+<section>
+      <div class="car-container">
+        <div class="Section-header">Upcoming cars </div>
+          <div class="tabs">
+                <div class="tab active">SUV</div>
+                <div class="tab">Hatchback</div>
+                <div class="tab">Sedan</div>
+                <div class="tab">MUV</div>
+                <div class="tab">Luxury</div>
+        </div>
+        <div class="card-box">
+          <div class="card">
+            <img src="image/car.png" alt="Car Image" class="opacityImg">
+            <div class="card-body">
+              <div class="card-title">Skoda Kylq</div>
+              <div class="card-price">₹ 7.89 Lakh*</div>
+              <div class="card-description">Nov 19, 2024 Expected Launch</div>
+              <a href="#" class="card-button">Alert Me When Launched</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="image/C2.PNG" alt="Car Image" class="opacityImg">
+            <div class="card-body">
+              <div class="card-title">Mahindra Scorpio</div>
+              <div class="card-price">₹ 13.62 - 17.42 Lakh*</div>
+              <div class="card-description">Nov 19, 2024 Expected Launch</div>
+              <a href="#" class="card-button">Alert Me When Launched</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="image/C3.PNG" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title">Tata Nexon</div>
+              <div class="card-price">₹ 8 - 15.50 Lakh*</div>
+              <div class="card-description">Nov 19, 2024 Expected Launch</div>
+              <a href="#" class="card-button">Alert Me When Launched</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="image/C4.PNG" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title">Mahindra Thar</div>
+              <div class="card-price">₹ 11.35 - 17.60 Lakh*</div>
+              <div class="card-description">Nov 19, 2024 Expected Launch</div>
+              <a href="#" class="card-button">Alert Me When Launched</a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="view-all">View All SUV Cars <i class="fa-solid fa-caret-right"></i></a>
+        <div class="arrowBtn"><i class="fa-solid fa-caret-right"></i></div>
+      </div>
+</section>
+<section>
+      <div class="car-container">
+        <div class="Section-header">Electric cars </div>
+          <div class="tabs">
+          <div class="tab active">Popular</div>
+          <div class="tab">Upcoming</div>
+          <div class="tab">Latest</div>
+        </div>
+        <div class="card-box">
+          <div class="card">
+            <img src="image/car.png" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title">Skoda Kylq</div>
+              <div class="card-price">₹ 7.89 Lakh*</div>
+              <a href="#" class="card-button">Check November Offers</a>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img src="image/C2.PNG" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title">Mahindra Scorpio</div>
+              <div class="card-price">₹ 13.62 - 17.42 Lakh*</div>
+              <a href="#" class="card-button">Check November Offers</a>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img src="image/C3.PNG" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title">Tata Nexon</div>
+              <div class="card-price">₹ 8 - 15.50 Lakh*</div>
+              <a href="#" class="card-button">Check November Offers</a>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img src="image/C4.PNG" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title">Mahindra Thar</div>
+              <div class="card-price">₹ 11.35 - 17.60 Lakh*</div>
+              <a href="#" class="card-button">Check November Offers</a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="view-all">View All SUV Cars <i class="fa-solid fa-caret-right"></i></a>
+      </div>
+</section>
+  
+<section>
+      <div class="car-container">
+        <div class="Section-header">Trusted used cars by budget</div>
+        <div class="tabs">
+          <div class="tab active">1 - 5 Lakh</div>
+          <div class="tab">5 - 10 Lakh</div>
+          <div class="tab">10 - 15 Lakh</div>
+        </div>
+        <div class="card-box">
+          <div class="card">
+            <img src="image/car.png" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title">Skoda Kylq</div>
+              <div class="card-price">₹ 7.89 Lakh*</div>
+              <a href="#" class="card-button">View Offers</a>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img src="image/C2.PNG" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title">Mahindra Scorpio</div>
+              <div class="card-price">₹ 13.62 - 17.42 Lakh*</div>
+              <a href="#" class="card-button">View Offers</a>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img src="image/C3.PNG" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title">Tata Nexon</div>
+              <div class="card-price">₹ 8 - 15.50 Lakh*</div>
+              <a href="#" class="card-button">View Offers</a>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img src="image/C4.PNG" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title">Mahindra Thar</div>
+              <div class="card-price">₹ 11.35 - 17.60 Lakh*</div>
+              <a href="#" class="card-button">View Offers</a>
+            </div>
+          </div>
+        </div>
+  
+
+        <a href="#" class="view-all">View All SUV Cars <i class="fa-solid fa-caret-right"></i></a>
+        <span class="arrowBtn"><i class="fa-solid fa-caret-right"></i></span>
+  
+      </div>
+    </section>
+    <section>
+      <div class="car-container">
+        <div class="Section-header">Popular brands
+        </div>
+        <div class="tabs">
+          <div class="tab active">SUV</div>
+          <div class="tab">Hatchback</div>
+          <div class="tab">Sedan</div>
+          <div class="tab">MUV</div>
+          <div class="tab">Luxury</div>
+        </div>
+        <div class="card-box">
+          <div class="card">
+            <img src="image/b1.PNG" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title text-center">Maruti</div>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img src="image/b2.PNG" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title text-center">Tata</div>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img src="image/b3.PNG" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title text-center">Kia</div>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img src="image/b4.PNG" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title text-center">Mahindra Thar</div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="image/b5.png" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title text-center">Mahindra Thar</div>
+              
+            </div>
+          </div>
+          <div class="card">
+            <img src="image/b6.png" alt="Car Image">
+            <div class="card-body">
+              <div class="card-title text-center">Mahindra Thar</div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="view-all">View All SUV Cars <i class="fas fa-arrow-right"></i></a>
+      </div>
+</section>
+<section>
+        <div class="car-container ">
+          <div class="Section-header">Get trusted used cars nearby </div>
+            <div class="row align-items-center justify-space-around">
+                <div class="col-md-8">
+                    <div class="card-box mb-3 ">
+                <!-- Card 1 -->
+                <div class="card roundimg">
+                  <img src="image/location.PNG" alt="Car Image">
+                  <div class="card-body">
+                    <div class="card-description text-center">Used car In</div>
+                    <div class="card-title text-center">Delhi</div>
+
+                  </div>
+                </div>
+        
+                <!-- Card 2 -->
+                <div class="card roundimg">
+                  <img src="image/location.PNG" alt="Car Image">
+                  <div class="card-body">
+                    <div class="card-description text-center">Used car In</div>
+                    <div class="card-title text-center">Delhi</div>
+                  </div>
+                </div>
+        
+                <!-- Card 3 -->
+                <div class="card roundimg">
+                  <img src="image/location.PNG" alt="Car Image">
+                  <div class="card-body">
+                    <div class="card-description text-center">Used car In</div>
+                    <div class="card-title text-center">Delhi</div>                 
+                 </div>
+                </div>
+        
+                <!-- Card 4 -->
+                <div class="card roundimg">
+                  <img src="image/location.PNG" alt="Car Image">
+                  <div class="card-body">
+                    <div class="card-description text-center">Used car In</div>
+                    <div class="card-title text-center">Delhi</div>
+                  </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="card roundimg">
+                  <img src="image/location.PNG" alt="Car Image">
+                  <div class="card-body">
+                    <div class="card-description text-center">Used car In</div>
+                    <div class="card-title text-center">Delhi</div>
+                    
+                  </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="card roundimg">
+                  <img src="image/location.PNG" alt="Car Image">
+                  <div class="card-body">
+                    <div class="card-description text-center">Used car In</div>
+                    <div class="card-title text-center">Delhi</div>
+                  </div>
+                </div>
+                    </div>
+                    <div class="card-box">
+                        <div class="card roundimg">
+                          <img src="image/location.PNG" alt="Car Image">
+                          <div class="card-body">
+                            <div class="card-description text-center">Used car In</div>
+                            <div class="card-title text-center">Delhi</div>
+        
+                          </div>
+                        </div>
+                        <div class="card roundimg">
+                          <img src="image/location.PNG" alt="Car Image">
+                          <div class="card-body">
+                            <div class="card-description text-center">Used car In</div>
+                            <div class="card-title text-center">Delhi</div>
+                          </div>
+                        </div>
+                
+                      
+                        <div class="card roundimg">
+                          <img src="image/location.PNG" alt="Car Image">
+                          <div class="card-body">
+                            <div class="card-description text-center">Used car In</div>
+                            <div class="card-title text-center">Delhi</div>                 
+                         </div>
+                        </div>
+                
+                        <div class="card roundimg">
+                          <img src="image/location.PNG" alt="Car Image">
+                          <div class="card-body">
+                            <div class="card-description text-center">Used car In</div>
+                            <div class="card-title text-center">Delhi</div>
+                          </div>
+                        </div>
+                       
+                        <div class="card roundimg">
+                          <img src="image/location.PNG" alt="Car Image">
+                          <div class="card-body">
+                            <div class="card-description text-center">Used car In</div>
+                            <div class="card-title text-center">Delhi</div>
+                            
+                          </div>
+                        </div>
+                      
+                        <div class="card roundimg">
+                          <img src="image/location.PNG" alt="Car Image">
+                          <div class="card-body">
+                            <div class="card-description text-center">Used car In</div>
+                            <div class="card-title text-center">Delhi</div>
+                          </div>
+                        </div>
+                            </div>
+            </div>
+          <div class="col-md-3">
+                <div class="text-center">
+                    <h4>I am looking to buy a second hand car in
+                    </h4>
+                    <form>
+                        <div class="mb-3">
+                            <select class="form-select" required>
+                                <option selected disabled>Enter Your City</option>
+                                <option value="1">Delhi</option>
+                                <option value="2">Noida</option>
+                                <option value="3">25-35 Lakh</option>
+                                <option value="4">35-45 Lakh</option>
+                            </select>
+                        </div>
+             </form>
+                </div>
+          </div>
+            </div>
+          <a href="#" class="view-all">View All SUV Cars <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </section>
+    
+    <section>
+        <div class="car-container">
+            <div class="Section-header">News to help choose your car</div>
+          
+             <div class="row ">
+                    <div class="card-box col-md-6">
+                        <div class="card-box  card-box-1">
+                            <div class="col-md-6 cardimg">
+                                <img src="image/car.png">
+            
+                            </div>
+                            <div class="col-md-6 card-body">
+                                <div class="p-1">
+                                    <h6>Mercedes-AMG G63 First Drive Review: What More Can Someone W...</h6>
+                                    <p>The G63 AMG combines luxury with off-road capabilities and has way more power that will ever be sensible!</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-box card-box-1">
+                            <div class="col-md-6 ">
+                                <img src="image/car.png">
+            
+                            </div>
+                            <div class="col-md-6 card-body">
+                                <div class="p-1">
+                                    <h6>Mercedes-AMG G63 First Drive Review: What More Can Someone W...</h6>
+                                    <p>The G63 AMG combines luxury with off-road capabilities and has way more power that will ever be sensible!</p>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+             </div>
+             <div class="row mt-3">
+                <div class="card-box col-md-6">
+                    <div class="card-box card-box-1">
+                        <div class="col-md-6 cardimg">
+                            <img src="image/car.png">
+        
+                        </div>
+                        <div class="col-md-6 card-body">
+                            <div class="p-1">
+                                <h6>Mercedes-AMG G63 First Drive Review: What More Can Someone W...</h6>
+                                <p>The G63 AMG combines luxury with off-road capabilities and has way more power that will ever be sensible!</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="card-box card-box-1">
+                        <div class="col-md-6 cardimg">
+                            <img src="image/car.png">
+        
+                        </div>
+                        <div class="col-md-6 card-body">
+                            <div class="p-1">
+                                <h6>Mercedes-AMG G63 First Drive Review: What More Can Someone W...</h6>
+                                <p>The G63 AMG combines luxury with off-road capabilities and has way more power that will ever be sensible!</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+         </div>
+           
+
+            <a href="#" class="view-all">View All SUV Cars <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+
+   <section>
+        <div class="car-container">
+           
+            <div class="Section-header">Know more to choose better</div>
+         
+            <div class="tabs">
+            <div class="tab active">Expert Reviews</div>
+            <div class="tab">Featured Stories</div>
+            <div class="tab">Videos</div>
+            </div>
+          
+             <div class="row ">
+                    <div class="card-box col-md-6">
+                        <div class="card-box card-box-1">
+                            <div class="col-md-6 cardimg">
+                                <img src="image/car.png">
+            
+                            </div>
+                            <div class="col-md-6 card-body">
+                                <div class="p-1">
+                                    <h6>Mercedes-AMG G63 First Drive Review: What More Can Someone W...</h6>
+                                    <p>The G63 AMG combines luxury with off-road capabilities and has way more power that will ever be sensible!</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-box card-box-1">
+                            <div class="col-md-6 ">
+                                <img src="image/car.png">
+            
+                            </div>
+                            <div class="col-md-6 card-body">
+                                <div class="p-1">
+                                    <h6>Mercedes-AMG G63 First Drive Review: What More Can Someone W...</h6>
+                                    <p>The G63 AMG combines luxury with off-road capabilities and has way more power that will ever be sensible!</p>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+             </div>
+             <div class="row mt-3">
+                <div class="card-box col-md-6">
+                    <div class="card-box card-box-1">
+                        <div class="col-md-6 cardimg">
+                            <img src="image/car.png">
+        
+                        </div>
+                        <div class="col-md-6 card-body">
+                            <div class="p-1">
+                                <h6>Mercedes-AMG G63 First Drive Review: What More Can Someone W...</h6>
+                                <p>The G63 AMG combines luxury with off-road capabilities and has way more power that will ever be sensible!</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="card-box card-box-1">
+                        <div class="col-md-6 cardimg">
+                            <img src="image/car.png">
+        
+                        </div>
+                        <div class="col-md-6 card-body">
+                            <div class="p-1">
+                                <h6>Mercedes-AMG G63 First Drive Review: What More Can Someone W...</h6>
+                                <p>The G63 AMG combines luxury with off-road capabilities and has way more power that will ever be sensible!</p>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+         </div>
+            <a href="#" class="view-all">View All SUV Cars <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+<div class="container">
+    <div class="row py-4">
+        <div class="col-lg-3 col-md-3 col-sm-12">
+            <div class="footer-service">
+                <img src="image/service-1.PNG" alt="Car Image">
+                <div class="title">
+                  <h3>India’s #1</h3>
+                  <p>Largest Auto portal</p>
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12">
+            <div class="footer-service">
+                <img src="image/service-2.PNG" alt="Car Image">
+                <div class="title">
+                  <h3>Car Sold</h3>
+                  <p>Every 4 minute</p>
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12">
+            <div class="footer-service">
+                <img src="image/service-1.PNG" alt="Car Image">
+                <div class="title">
+                  <h3>India’s #1</h3>
+                  <p>Largest Auto portal</p>
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12">
+            <div class="footer-service">
+                <img src="image/service-2.PNG" alt="Car Image">
+                <div class="title">
+                  <h3>Car Sold</h3>
+                  <p>Every 4 minute</p>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+  <footer class="footer">
+    <div class="footer-row">
+     
+      <div class="footer-column">
+        <h4>About CarDekho</h4>
+        <ul>
+          <li><a href="#">TrucksDekho</a></li>
+          <li><a href="#">BikeDekho</a></li>
+          <li><a href="#">Insurance</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+
+     
+      <div class="footer-column">
+        <h4>Connect With Us</h4>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+
+  
+      <div class="footer-column">
+        <h4>Others</h4>
+        <ul>
+          <li><a href="#">Dealers</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+
+     
+      <div class="footer-column">
+        <div class="mb-4">
+            <h4>Experience CarDekho App</h4>
+        <img src="image/playstore.png" alt="Playstore Link">
+        </div>
+        <div class="">
+            <h4>CarDekho Group Ventures</h4>
+        <img src="image/playstore2.png" alt="CarDekho Group" >
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2023 CarDekho. All Rights Reserved.</div>
+      <div class="social-icons">
+        <span style="font-weight: 600; color: black;">Connect:</span>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
